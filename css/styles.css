@@ -11,6 +11,7 @@ body {
 	font-family: 'Source Serif Pro', serif;
 	line-height: 1.6;
 	color: #3a3a3a;
+  background-color: #172331;
   background: linear-gradient(135deg, #172331, #a2c9e6);
   width: 100%;
 }
