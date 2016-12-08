@@ -1,0 +1,470 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+  /*border: red 1px solid;*/
+}
+
+body {
+	font-family: 'Source Serif Pro', serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+  background: linear-gradient(135deg, #172331, #a2c9e6);
+  width: 100%;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+header {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align:center;
+  width: 100%;
+  color: #fff;
+  margin: 1.5rem 0;
+  line-height:1;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;  
+}
+
+main {
+  background-color: rgba(255,255,255, 0.7);
+  padding: 3%;
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin:0;
+}
+
+h2,
+legend {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.intro h1 {
+  width:100%;
+  text-align:center;
+  background-color: #ffff00;
+  display: block;
+  padding: 5px 0;
+  background-image: linear-gradient(to right, yellow, #ffe033 170%);
+  border-bottom: 2px solid #e8d009;
+}
+
+.highlight {
+  font-size: 1.0rem;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px dotted #222;
+  margin-top:0;
+}
+
+a {
+  color: #3a3a3a;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px dotted;
+  padding-bottom: 10px;
+  margin-bottom: 25px; 
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+  padding-bottom: 10px;
+  margin-bottom: 0px; 
+}
+
+footer p {
+  font-size: 80%;
+  padding-top:35%;
+  padding-bottom: 2%;
+  margin-bottom:0;
+}
+
+.bottom {
+  background-image:
+    url("../img/bg-left.png"),
+    url("../img/bg-phone.png");
+  background-position:
+    10px 0,
+    90% 30%;
+  background-size:
+    50% auto,
+    35% auto;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+
+  
+
+/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+/* ================================= 
+  Form Styling
+==================================== */
+
+form {
+
+}
+
+/* Form Fields -------------------- */
+
+input,
+select,
+textarea {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 1em;
+  width: 100%;
+  border: none;
+  height: auto;
+  padding: 15px;
+  outline: 0;
+  margin-bottom: 1.2em;
+  border-radius: .3em;
+  border-bottom: 3px solid rgba(0,0,0, 0.05);
+  background-color: rgba(255,255,255, 0.75);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+  
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option { 
+  font-style:normal; }
+
+select option:first-child{
+  color: #999;
+  font-style: italic;
+}
+
+select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1.4em + 2px),
+    calc(100% - 15px) calc(1.4em + 2px),
+    calc(100% - 2.5em) 0.9em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select:focus {
+  background-image:
+    linear-gradient(45deg, gray 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, gray 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1.4em,
+    calc(100% - 20px) 1.4em,
+    calc(100% - 2.5em) 0.9em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  outline: 0;
+}
+
+.input-group {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+::placeholder {
+  font-style: italic;
+  color: #999;
+  text-align:right;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-style: italic;
+  color: #999;
+  text-align:right;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-style: italic;
+  color: #999;
+  text-align:right;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-style: italic;
+  color: #999;
+  text-align:right;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-style: italic;
+  color: #999;
+  text-align:right;
+}
+
+input:focus, 
+select:focus,
+textarea:focus {
+  border-bottom: 3px solid #f6ed01;
+  -webkit-transition: border-color 2s ease;
+  -moz-transition: border-color 2s ease;
+  -o-transition: border-color 2s ease;
+  -ms-transition: border-color 2s ease;
+  transition: border-color 2s ease;   
+  background-color: rgba(255,255,255, 0.9);
+  text-align: left;
+  color: #222; 
+  font-style:normal;
+}
+
+.part1 input[type=radio] {
+    width:auto;
+}
+
+.part1 .input-group {
+    display: inline-block;
+    text-align:left;
+}
+.part1 input[type=radio] + label {
+  width:auto;
+  margin-right: 25px;
+}
+
+
+input[type=checkbox]:checked + label,
+input[type=radio]:checked + label{
+  font-weight: 700;
+} 
+
+input[type=submit] {
+  border-bottom:none;
+  background-color: yellow;
+  background-image: linear-gradient(to bottom, yellow, #ffe033 150%);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  cursor: pointer;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #ffdd36;
+  background-image: linear-gradient(to bottom, #fefc44, yellow);
+  text-align: center;
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 568px) {
+
+  .highlight {
+    padding-top:0;
+  }
+
+ .container {
+  width: 90%;
+  margin: 0 auto;
+  
+} 
+
+.intro h1 {
+  background-color: #ffff00;
+  display: inline-block;
+  width: auto;
+  padding: 1.5% 4%;
+  border-top-left-radius: 15px;
+  border-top-right-radius:15px;
+  border-bottom: 2px solid #d7d703;
+}
+
+main {
+  background-color: rgba(255,255,255, 0.7);
+  padding: 4%;
+  border-radius: 15px;
+  border-top-left-radius:0;
+}
+
+footer p {
+  font-size: 90%;
+}
+
+}
+
+@media (min-width: 768px) {
+
+  
+
+  main {
+    background-color: #c6ccd4;
+    padding: 5%;
+  }
+
+  .intro h1 {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+
+
+  input[type="submit"] {
+    display: inline-block;
+    width: auto; 
+    padding-right: 4em;
+    padding-left: 4em;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+body {
+    background:  /*url(../img/background.png) no-repeat 0 100px,*/
+                 linear-gradient(135deg, #172331, #89abd5);
+    position:relative;
+    background-size: 100%;
+  }
+
+  .bottom {
+    background: none; 
+    height: auto;
+  }
+
+  .right {
+    background-image: url("../img/bg-right.png");
+    background-position: 0 0px;
+    left: 73%;
+    height: 400px;
+    width: 27%;
+    top: 200px;
+  }
+  
+  .left {
+    background-image: url("../img/bg-left.png");
+    background-position: 0 0px;
+    left:0;
+    height: 400px;
+    width: 27%;
+    top: 550px;
+  }
+  
+  .phone {
+    background-image: url("../img/bg-phone.png");
+    background-position: 90% 0px;
+    left:73%;
+    height: 189px;
+    width: 20%;
+    top: 950px;
+  }
+
+  .bg {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    z-index: 12;
+  }
+  
+  .container {
+    max-width: 50%;
+  } 
+
+  .part1 label {
+    display: inline-block;
+    width:24%;
+  }
+  
+  .part1 input,
+  .part1 select {
+    display: inline-block;
+    width:75%;
+  }
+
+footer p {
+  padding-top:2%;
+  padding-bottom: 2%;
+  margin-bottom:0;
+}
+ 
+}
+
+@media (min-width: 1300px) {
+
+  .container {
+    max-width: 600px;
+  }
+
+  .right {
+    background-image: url("../img/bg-right.png");
+    background-position: 0 0px;
+    left: calc(50% - -275px);  
+    height: 400px;
+    width: 350px;
+    top: 200px;
+  }
+
+  
+  .left {
+    background-image: url("../img/bg-left.png");
+    background-position: 0 0px;
+    left: calc(50% - 625px);
+    height: 400px;
+    width: 350px;
+    top: 550px;
+  }
+  
+  .phone {
+    background-image: url("../img/bg-phone.png");
+    background-position: 0 0px;
+    left: calc(50% + 275px);
+    height: 189px;
+    width: 200px;
+    top: 950px;
+  }
+
+}
